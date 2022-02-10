@@ -1,0 +1,39 @@
+{
+    "name":"CommandBox GitHub",
+    "version":"1.0.0",
+    "location":"forgeboxStorage",
+    "author":"Eric Peterson",
+    "homepage":"https://github.com/commandbox-modules/commandbox-github",
+    "documentation":"https://github.com/commandbox-modules/commandbox-github",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/commandbox-modules/commandbox-github"
+    },
+    "bugs":"https://github.com/commandbox-modules/commandbox-github/issues",
+    "slug":"commandbox-github",
+    "shortDescription":"Run your cfmigrations from CommandBox",
+    "instructions":"https://github.com/commandbox-modules/commandbox-github",
+    "type":"commandbox-modules",
+    "keywords":[
+        "commandbox",
+        "github"
+    ],
+    "scripts":{
+        "onRelease":"publish",
+        "postPublish":"!git push && git push --tags",
+        "format":"cfformat run commands/**/*.cfc,ModuleConfig.cfc --overwrite"
+    },
+    "private":false,
+    "license":[
+        {
+            "type":"MIT",
+            "URL":"https://github.com/commandbox-modules/commandbox-github/blob/master/LICENSE"
+        }
+    ],
+    "dependencies":{
+        "hyper":"^3.4.0"
+    },
+    "installPaths":{
+        "hyper":"modules/hyper/"
+    }
+}
